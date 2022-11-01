@@ -23,8 +23,29 @@ npm i -g @nestjs/cli
 docker compuse up -d
 ```
 
-5. Reconstruir la base de datos con la semilla
+5. Clonar el archivo **.env.template** y renombrar la copia a **.env**
+
+6. Llenar las variables de entorno definididas en el `.env`
+
+7. Ejecutar la aplicacion en dev:
+
+```
+yarn start:dev
+```
+
+8. Reconstruir la base de datos con la semilla
 
 ```
 GET localhost:3000/api/v2/seed
+```
+
+## Stack usado
+-   MongoDB
+-   Nest
+
+# Notas
+Heroku redeploy sin cambios:
+```
+git commit --allow-empty -m "Tigger Heroky deploy"
+git push heroku <master|main>
 ```
